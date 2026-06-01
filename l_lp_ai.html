@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINEマーケティングを最適化する「Lベスト」</title>
+    <!-- Tailwind CSSの読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- カスタムカラーとフォントの設定 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'line-green': '#06C755',
+                        'primary': '#1E3A8A', // 信頼感のあるネイビー
+                        'secondary': '#3B82F6',
+                        'accent': '#F59E0B',
+                        'brand-purple': '#6366F1', // シナリオ用のパープル
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(90deg, #1E3A8A 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* スライダーのカスタマイズ */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #6366F1;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ヘッダー -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-8 h-8 bg-line-green rounded-lg flex items-center justify-center text-white font-bold text-xl">L</div>
+                    <span class="font-bold text-2xl tracking-tight text-primary">Lベスト</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-primary font-medium transition">特徴</a>
+                    <a href="#ai-demo" class="text-gray-600 hover:text-primary font-medium transition">AIシナリオデモ</a>
+                    <a href="#functions" class="text-gray-600 hover:text-primary font-medium transition">機能一覧</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-primary font-medium transition">料金プラン</a>
+                </nav>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="text-primary font-medium hover:text-secondary transition">ログイン</a>
+                    <a href="#ai-demo" class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-primary/30 transition transform hover:-translate-y-0.5">
+                        無料デモ体験
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション（MV） -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-blue-100 text-primary font-bold px-4 py-1.5 rounded-full text-sm mb-6">
+                        LINE公式アカウント拡張ツール
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+                        LINEの潜在力を引き出し、<br>
+                        <span class="gradient-text">売上を最大化する。</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+                        「Lベスト」は、顧客一人ひとりのデータに基づいた最適なコミュニケーションを実現。一斉配信のムダをなくし、LTV（顧客生涯価値）を飛躍的に向上させます。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#ai-demo" class="bg-primary hover:bg-primary/90 text-white text-center px-8 py-4 rounded-full font-bold text-lg shadow-xl shadow-primary/30 transition transform hover:-translate-y-1">
+                            AIシナリオ生成デモを試す
+                        </a>
+                        <a href="#features" class="bg-white hover:bg-gray-50 border-2 border-primary text-primary text-center px-8 py-4 rounded-full font-bold text-lg transition transform hover:-translate-y-1">
+                            3つの強みを見る
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-2xl p-4 border border-gray-100 relative z-10 transform md:rotate-2 hover:rotate-0 transition duration-500">
+                        <img src="https://placehold.co/800x600/f3f4f6/1E3A8A?text=[L-Best+AI+Marketing+Dashboard]" alt="Lベスト ダッシュボード画面" class="rounded-xl w-full h-auto">
+                    </div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 課題セクション -->
+    <section class="py-24 bg-gray-50" id="issues">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-black mb-4">LINE運用で、<span class="text-red-500">こんなお悩み</span>ありませんか？</h2>
+            <p class="text-gray-600 mb-16 text-lg">せっかく集めた友だちリスト、効果的に活用できていますか？</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 課題1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-red-100 text-red-500 rounded-full flex items-center justify-center font-black text-xl border-4 border-white">!</div>
+                    <h3 class="font-bold text-xl mb-4 mt-4">ブロック率が高い</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">一斉配信ばかりで、ユーザーにとって関係のない情報まで送ってしまい、ブロックされ続けている。</p>
+                </div>
+                <!-- 課題2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-red-100 text-red-500 rounded-full flex items-center justify-center font-black text-xl border-4 border-white">!</div>
+                    <h3 class="font-bold text-xl mb-4 mt-4">費用対効果が悪い</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">LINE公式の料金プラン改定により、一斉配信のコストが増大。費用対効果が合わなくなってきた。</p>
+                </div>
+                <!-- 課題3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-red-100 text-red-500 rounded-full flex items-center justify-center font-black text-xl border-4 border-white">!</div>
+                    <h3 class="font-bold text-xl mb-4 mt-4">顧客データがバラバラ</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">ECサイトの購買データとLINEの友だち情報が紐付いておらず、データに基づいた施策が打てない。</p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-2xl font-bold text-primary">
+                その課題、<span class="text-3xl">「Lベスト」</span>がすべて解決します。
+            </div>
+        </div>
+    </section>
+
+    <!-- 特徴・解決策セクション -->
+    <section class="py-24 bg-white" id="features">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-black mb-4">Lベストが選ばれる<span class="text-primary">3つの理由</span></h2>
+                <p class="text-gray-600 text-lg">高度なマーケティングを、驚くほどシンプルに。</p>
+            </div>
+
+            <!-- 特徴1 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+                <div class="order-2 lg:order-1">
+                    <div class="text-line-green font-black text-6xl opacity-20 mb-[-30px]">01</div>
+                    <h3 class="text-3xl font-bold mb-6 relative z-10">
+                        「欲しい人」にだけ届く。<br>
+                        超・高精度のセグメント配信
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        アンケート回答、クリック履歴、Webサイトでの行動履歴など、あらゆるデータで友だちを自動タグ付け。一人ひとりの興味関心に合わせたパーソナライズ配信を実現し、ブロック率の低下とCVRの大幅アップをもたらします。
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-700 font-medium">
+                            <svg class="w-6 h-6 text-line-green mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            無駄な配信コストの削減
+                        </li>
+                        <li class="flex items-center text-gray-700 font-medium">
+                            <svg class="w-6 h-6 text-line-green mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            ユーザー体験の向上
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 lg:order-2 bg-gray-50 rounded-2xl p-6">
+                    <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=[Segment+Marketing+Dashboard]" alt="セグメント配信" class="rounded-xl shadow-md w-full">
+                </div>
+            </div>
+
+            <!-- 特徴2 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+                <div class="bg-gray-50 rounded-2xl p-6">
+                    <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=[Visual+Scenario+Builder]" alt="自動化シナリオ" class="rounded-xl shadow-md w-full">
+                </div>
+                <div>
+                    <div class="text-secondary font-black text-6xl opacity-20 mb-[-30px]">02</div>
+                    <h3 class="text-3xl font-bold mb-6 relative z-10">
+                        24時間、自動で接客。<br>
+                        柔軟なシナリオ（MA）機能
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        「友だち追加時」「商品購入から3日後」「特定のリンクをクリックした時」など、ユーザーの行動をトリガーにした自動配信（ステップ配信）を直感的に作成可能。見込み客を優良顧客へと自動で育成します。
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-700 font-medium">
+                            <svg class="w-6 h-6 text-secondary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            ドラッグ＆ドロップの直感操作
+                        </li>
+                        <li class="flex items-center text-gray-700 font-medium">
+                            <svg class="w-6 h-6 text-secondary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            機会損失を防ぐ自動フォロー
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 特徴3 -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="text-accent font-black text-6xl opacity-20 mb-[-30px]">03</div>
+                    <h3 class="text-3xl font-bold mb-6 relative z-10">
+                        データが資産になる。<br>
+                        EC・外部ツールとのシームレス連携
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Shopifyや自社データベース、CRMと連携し、会員IDとLINE IDを統合。「カゴ落ち配信」や「過去の購買履歴に基づいたレコメンド」など、プラットフォームの壁を越えた高度なマーケティングをLINE上で完結させます。
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-700 font-medium">
+                            <svg class="w-6 h-6 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            オムニチャネルでのデータ一元化
+                        </li>
+                        <li class="flex items-center text-gray-700 font-medium">
+                            <svg class="w-6 h-6 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            売上に直結する高度な分析レポート
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 lg:order-2 bg-gray-50 rounded-2xl p-6">
+                    <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=[Data+Sync+Architecture]" alt="データ連携" class="rounded-xl shadow-md w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🌟 AIシナリオ生成インタラクティブデモセクション -->
+    <section class="py-24 bg-gradient-to-br from-[#EEF2FF] via-[#F5F3FF] to-[#FDF4FF] border-t border-b border-indigo-100" id="ai-demo">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="inline-block bg-brand-purple/10 text-brand-purple font-bold px-4 py-1.5 rounded-full text-sm mb-4 border border-brand-purple/20">
+                    最新AI機能 体験デモ
+                </div>
+                <h2 class="text-3xl md:text-4xl font-black mb-4 text-primary">🧠 超スマート、AIシナリオ自動生成</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    業種とマーケティングKPIを選ぶだけで、ターゲットを動かす高度なLINEステップ配信シナリオをAIが瞬時に設計します。
+                </p>
+            </div>
+
+            <!-- メインのデモカードコンテナ -->
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 max-w-4xl mx-auto min-h-[580px] flex flex-col">
+                
+                <!-- ウィザードヘッダー -->
+                <div class="px-8 py-6 border-b border-gray-100 flex items-center justify-between bg-white flex-shrink-0">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🤖</span>
+                        <h3 class="font-black text-xl text-gray-800">AIシナリオ生成</h3>
+                    </div>
+                    <!-- 閉じるボタン（デザイン再現） -->
+                    <button class="text-gray-400 hover:text-gray-600 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- ステップ進捗インジケーター -->
+                <div class="flex justify-center items-center gap-2 py-4 bg-gray-50/50 border-b border-gray-100/60 select-none flex-shrink-0">
+                    <!-- ステップ1バブル -->
+                    <div id="step-indicator-1" class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm bg-brand-purple text-white transition-all duration-300">1</div>
+                    <div id="step-line-1" class="w-12 h-0.5 bg-gray-200 transition-all duration-300"></div>
+                    <!-- ステップ2バブル -->
+                    <div id="step-indicator-2" class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm bg-gray-200 text-gray-600 transition-all duration-300">2</div>
+                    <div id="step-line-2" class="w-12 h-0.5 bg-gray-200 transition-all duration-300"></div>
+                    <!-- ステップ3バブル -->
+                    <div id="step-indicator-3" class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm bg-gray-200 text-gray-600 transition-all duration-300">3</div>
+                </div>
+
+                <!-- ウィザードコンテンツエリア -->
+                <div class="flex-grow p-8 flex flex-col justify-between">
+                    
+                    <!-- 【STEP 1】 業種を選択 -->
+                    <div id="wizard-step-1" class="space-y-6">
+                        <div class="flex flex-col">
+                            <span class="text-gray-800 font-bold text-lg mb-4">業種を選択</span>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4" id="industry-grid">
+                                <!-- 飲食店 -->
+                                <button onclick="selectIndustry('restaurant', '飲食店', '🍴')" class="industry-card flex flex-col items-center justify-center p-6 bg-white border-2 border-brand-purple text-brand-purple rounded-2xl hover:shadow-md transition-all duration-200 gap-2 relative overflow-hidden" data-id="restaurant">
+                                    <span class="text-3xl">🍴</span>
+                                    <span class="font-bold text-gray-800">飲食店</span>
+                                </button>
+                                <!-- 美容サロン -->
+                                <button onclick="selectIndustry('salon', '美容サロン', '💇‍♀️')" class="industry-card flex flex-col items-center justify-center p-6 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-2" data-id="salon">
+                                    <span class="text-3xl">💇‍♀️</span>
+                                    <span class="font-bold text-gray-800">美容サロン</span>
+                                </button>
+                                <!-- 不動産 -->
+                                <button onclick="selectIndustry('realestate', '不動産', '🏠')" class="industry-card flex flex-col items-center justify-center p-6 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-2" data-id="realestate">
+                                    <span class="text-3xl">🏠</span>
+                                    <span class="font-bold text-gray-800">不動産</span>
+                                </button>
+                                <!-- EC・通販 -->
+                                <button onclick="selectIndustry('ec', 'EC・通販', '🛒')" class="industry-card flex flex-col items-center justify-center p-6 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-2" data-id="ec">
+                                    <span class="text-3xl">🛒</span>
+                                    <span class="font-bold text-gray-800">EC・通販</span>
+                                </button>
+                                <!-- 保険 -->
+                                <button onclick="selectIndustry('insurance', '保険', '🛡️')" class="industry-card flex flex-col items-center justify-center p-6 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-2" data-id="insurance">
+                                    <span class="text-3xl">🛡️</span>
+                                    <span class="font-bold text-gray-800">保険</span>
+                                </button>
+                                <!-- クリニック -->
+                                <button onclick="selectIndustry('clinic', 'クリニック', '🏥')" class="industry-card flex flex-col items-center justify-center p-6 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-2" data-id="clinic">
+                                    <span class="text-3xl">🏥</span>
+                                    <span class="font-bold text-gray-800">クリニック</span>
+                                </button>
+                                <!-- フィットネス -->
+                                <button onclick="selectIndustry('fitness', 'フィットネス', '💪')" class="industry-card flex flex-col items-center justify-center p-6 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-2" data-id="fitness">
+                                    <span class="text-3xl">💪</span>
+                                    <span class="font-bold text-gray-800">フィットネス</span>
+                                </button>
+                                <!-- 教育 -->
+                                <button onclick="selectIndustry('education', '教育', '📚')" class="industry-card flex flex-col items-center justify-center p-6 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-2" data-id="education">
+                                    <span class="text-3xl">📚</span>
+                                    <span class="font-bold text-gray-800">教育</span>
+                                </button>
+                                <!-- 携帯ショップ -->
+                                <button onclick="selectIndustry('mobile', '携帯ショップ', '📱')" class="industry-card flex flex-col items-center justify-center p-6 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-2" data-id="mobile">
+                                    <span class="text-3xl">📱</span>
+                                    <span class="font-bold text-gray-800">携帯ショップ</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 【STEP 2】 KPI・目的を選択 -->
+                    <div id="wizard-step-2" class="space-y-6 hidden">
+                        <div class="flex flex-col">
+                            <span class="text-gray-800 font-bold text-lg mb-4">KPI・目的を選択</span>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="kpi-grid">
+                                <!-- 予約数UP -->
+                                <button onclick="selectKpi('booking', '予約数UP', '📅')" class="kpi-card flex items-center p-5 bg-white border-2 border-brand-purple text-brand-purple rounded-2xl hover:shadow-md transition-all duration-200 gap-4" data-id="booking">
+                                    <span class="text-2xl">📅</span>
+                                    <span class="font-bold text-gray-800">予約数UP</span>
+                                </button>
+                                <!-- リピート率UP -->
+                                <button onclick="selectKpi('repeat', 'リピート率UP', '🔄')" class="kpi-card flex items-center p-5 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-4" data-id="repeat">
+                                    <span class="text-2xl">🔄</span>
+                                    <span class="font-bold text-gray-800">リピート率UP</span>
+                                </button>
+                                <!-- カゴ落ち回収 -->
+                                <button onclick="selectKpi('cart', 'カゴ落ち回収', '🛒')" class="kpi-card flex items-center p-5 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-4" data-id="cart">
+                                    <span class="text-2xl">🛒</span>
+                                    <span class="font-bold text-gray-800">カゴ落ち回収</span>
+                                </button>
+                                <!-- 口コミ獲得 -->
+                                <button onclick="selectKpi('review', '口コミ獲得', '⭐')" class="kpi-card flex items-center p-5 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-4" data-id="review">
+                                    <span class="text-2xl">⭐</span>
+                                    <span class="font-bold text-gray-800">口コミ獲得</span>
+                                </button>
+                                <!-- クーポン利用UP -->
+                                <button onclick="selectKpi('coupon', 'クーポン利用UP', '🏷️')" class="kpi-card flex items-center p-5 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-4" data-id="coupon">
+                                    <span class="text-2xl">🏷️</span>
+                                    <span class="font-bold text-gray-800">クーポン利用UP</span>
+                                </button>
+                                <!-- 休眠掘り起こし -->
+                                <button onclick="selectKpi('reengagement', '休眠掘り起こし', '💤')" class="kpi-card flex items-center p-5 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-4" data-id="reengagement">
+                                    <span class="text-2xl">💤</span>
+                                    <span class="font-bold text-gray-800">休眠掘り起こし</span>
+                                </button>
+                                <!-- アップセル -->
+                                <button onclick="selectKpi('upsell', 'アップセル', '📈')" class="kpi-card flex items-center p-5 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-4" data-id="upsell">
+                                    <span class="text-2xl">📈</span>
+                                    <span class="font-bold text-gray-800">アップセル</span>
+                                </button>
+                                <!-- 友だち育成 -->
+                                <button onclick="selectKpi('nurturing', '友だち育成', '🌱')" class="kpi-card flex items-center p-5 bg-white border border-gray-200 rounded-2xl hover:border-brand-purple/50 hover:shadow-md transition-all duration-200 gap-4" data-id="nurturing">
+                                    <span class="text-2xl">🌱</span>
+                                    <span class="font-bold text-gray-800">友だち育成</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 【STEP 3】 生成設定 -->
+                    <div id="wizard-step-3" class="space-y-6 hidden">
+                        <div class="flex flex-col space-y-6">
+                            <span class="text-gray-800 font-bold text-lg">生成設定</span>
+                            
+                            <!-- トーン設定 -->
+                            <div>
+                                <label class="block text-sm font-bold text-gray-600 mb-2">トーン</label>
+                                <div class="flex gap-3">
+                                    <button onclick="selectTone('friendly')" id="tone-btn-friendly" class="tone-btn px-6 py-2.5 rounded-xl border-2 border-brand-purple bg-brand-purple/5 text-brand-purple font-bold text-sm transition-all duration-200">
+                                        親しみやすい
+                                    </button>
+                                    <button onclick="selectTone('professional')" id="tone-btn-professional" class="tone-btn px-6 py-2.5 rounded-xl border border-gray-200 text-gray-600 font-bold text-sm hover:border-brand-purple/50 transition-all duration-200">
+                                        プロフェッショナル
+                                    </button>
+                                    <button onclick="selectTone('casual')" id="tone-btn-casual" class="tone-btn px-6 py-2.5 rounded-xl border border-gray-200 text-gray-600 font-bold text-sm hover:border-brand-purple/50 transition-all duration-200">
+                                        カジュアル
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- ステップ数スライダー -->
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="block text-sm font-bold text-gray-600">ステップ数</label>
+                                    <span id="step-count-val" class="text-2xl font-black text-brand-purple">3</span>
+                                </div>
+                                <input type="range" id="steps-range" min="2" max="5" value="3" oninput="updateStepCount(this.value)" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                            </div>
+
+                            <!-- サマリーカード -->
+                            <div class="p-4 bg-gray-50 rounded-2xl border border-gray-100 flex items-start gap-3">
+                                <span class="text-xl">📋</span>
+                                <div>
+                                    <div class="text-sm text-gray-800 font-bold">
+                                        生成内容: <span id="summary-industry">飲食店</span> × <span id="summary-kpi">予約数UP</span>
+                                    </div>
+                                    <div class="text-xs text-gray-400 mt-1">
+                                        <span id="summary-tone">親しみやすい</span> / <span id="summary-steps">3ステップ</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- アンケート連動オプション -->
+                            <label class="flex items-center gap-3 cursor-pointer select-none">
+                                <input type="checkbox" id="survey-checkbox" class="w-5 h-5 rounded border-gray-300 text-brand-purple focus:ring-brand-purple" checked>
+                                <span class="text-sm font-bold text-gray-700 mb-0">📝 アンケート連動シナリオを生成 <span class="text-xs text-gray-400 font-normal">（回答内容で分岐するシナリオ）</span></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- -->
+                    <!-- 【リード獲得フォームステップ（アンロック用）】 -->
+                    <div id="wizard-lead-form" class="space-y-6 hidden">
+                        <div class="text-center max-w-md mx-auto space-y-3">
+                            <span class="text-4xl inline-block animate-bounce">🎁</span>
+                            <h4 class="text-xl font-black text-gray-800">AIシナリオの設計が完了しました！</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                選択された設定に基づき、AIが最適な配信フローを組み立てました。以下のフォームを入力して、できあがったシナリオを今すぐ確認しましょう！
+                            </p>
+                        </div>
+                        
+                        <form id="lead-capture-form" class="max-w-md mx-auto space-y-4" onsubmit="submitLeadForm(event)">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">会社名 <span class="text-red-500">*</span></label>
+                                <input type="text" id="lead-company" required placeholder="例：株式会社Lベスト" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-brand-purple focus:border-brand-purple outline-none transition">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-600 mb-1">お名前 <span class="text-red-500">*</span></label>
+                                    <input type="text" id="lead-name" required placeholder="例：山田 太郎" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-brand-purple focus:border-brand-purple outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-600 mb-1">電話番号 <span class="text-red-500">*</span></label>
+                                    <input type="tel" id="lead-phone" required placeholder="例：03-1234-5678" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-brand-purple focus:border-brand-purple outline-none transition">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-600 mb-1">メールアドレス <span class="text-red-500">*</span></label>
+                                <input type="email" id="lead-email" required placeholder="例：yamada@l-best.com" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:ring-2 focus:ring-brand-purple focus:border-brand-purple outline-none transition">
+                            </div>
+                            <div class="text-[11px] text-gray-400 text-center leading-relaxed">
+                                ※送信いただくことで、弊社の個人情報保護方針に同意したものとみなされます。
+                            </div>
+                            <button type="submit" class="w-full bg-brand-purple hover:bg-brand-purple/95 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-indigo-100 transition duration-200 flex items-center justify-center gap-2">
+                                <span>🔓 シナリオをアンロックして確認する</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- 【結果画面 / ローディング】 -->
+                    <div id="wizard-loading" class="hidden flex flex-col items-center justify-center py-16 space-y-4">
+                        <div class="relative w-16 h-16">
+                            <div class="absolute inset-0 border-4 border-indigo-200 rounded-full"></div>
+                            <div class="absolute inset-0 border-4 border-brand-purple rounded-full border-t-transparent animate-spin"></div>
+                        </div>
+                        <p class="font-bold text-gray-700 text-lg animate-pulse" id="loading-text">AIが業界最適なシナリオを設計中...</p>
+                        <p class="text-xs text-gray-400">これには数秒かかる場合があります</p>
+                    </div>
+
+                    <!-- 【結果表示画面】 -->
+                    <div id="wizard-result" class="hidden space-y-6">
+                        <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-lg">✨</span>
+                                <span class="font-black text-gray-800 text-lg">AI生成シナリオ フロー</span>
+                            </div>
+                            <button onclick="resetWizard()" class="text-sm text-brand-purple hover:underline font-bold">最初から作り直す</button>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- 左側：タイムラインフロー表示 -->
+                            <div class="md:col-span-1 bg-gray-50 p-4 rounded-2xl border border-gray-100 max-h-[380px] overflow-y-auto space-y-4" id="scenario-flow-timeline">
+                                <!-- JSで動的に追加 -->
+                            </div>
+
+                            <!-- 右側：選択中ステップのメッセージ詳細 -->
+                            <div class="md:col-span-2 bg-[#849ebf] rounded-2xl p-4 shadow-inner relative flex flex-col justify-between min-h-[300px]">
+                                <div class="bg-[#273246] text-white text-center py-2.5 rounded-t-xl font-bold text-xs mb-3 -mt-4 -mx-4 shadow-md">
+                                    Lベスト プレビューモニター
+                                </div>
+                                <div class="flex-grow flex flex-col justify-between">
+                                    <div class="bg-white text-gray-800 p-4 rounded-xl shadow relative">
+                                        <div class="absolute -left-2 top-3 w-4 h-4 bg-white" style="clip-path: polygon(100% 0, 0 0, 100% 100%);"></div>
+                                        <div class="text-[11px] font-bold text-brand-purple mb-1" id="preview-step-badge">1通目</div>
+                                        <p id="preview-message-text" class="text-xs md:text-sm leading-relaxed whitespace-pre-wrap font-sans mb-3 text-gray-700"></p>
+                                        
+                                        <!-- コピートースト -->
+                                        <div id="demo-copy-toast" class="hidden text-xs text-green-600 font-bold mb-2">✓ クリップボードにコピーしました！</div>
+                                        
+                                        <!-- コピーボタン -->
+                                        <button onclick="copyScenarioMessage()" class="w-full border border-gray-200 hover:bg-gray-50 text-gray-700 text-xs py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                                            <span>メッセージ文面をコピー</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- フッターアクションバー -->
+                    <div id="wizard-actions" class="border-t border-gray-100 pt-6 flex justify-between items-center bg-white mt-6 flex-shrink-0">
+                        <!-- 左側ボタン -->
+                        <button id="prev-btn" onclick="goToPrevStep()" class="px-6 py-3 rounded-xl font-bold text-gray-500 hover:bg-gray-100 transition duration-200 text-sm hidden">キャンセル</button>
+                        <button id="cancel-btn" class="px-6 py-3 rounded-xl font-bold text-gray-500 hover:bg-gray-100 transition duration-200 text-sm">キャンセル</button>
+
+                        <!-- 右側ボタン -->
+                        <button id="next-btn" onclick="goToNextStep()" class="bg-brand-purple hover:bg-brand-purple/95 text-white px-8 py-3 rounded-xl font-bold text-sm shadow-lg shadow-indigo-200 transition duration-200">次へ</button>
+                        <button id="generate-btn" onclick="triggerScenarioGeneration()" class="bg-brand-purple hover:bg-brand-purple/95 text-white px-8 py-3 rounded-xl font-bold text-sm shadow-lg shadow-indigo-200 transition duration-200 hidden flex items-center gap-2">
+                            <span>🤖 AIで生成する</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 機能一覧 -->
+    <section class="py-24 bg-gray-900 text-white" id="functions">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-4">やりたい施策を、すべて網羅。</h2>
+                <p class="text-gray-400 text-lg">豊富で使いやすい機能群</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition">
+                    <div class="w-12 h-12 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">リッチメニュー分岐</h4>
+                    <p class="text-sm text-gray-400">属性ごとに表示するメニューを自動で切り替え。</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition">
+                    <div class="w-12 h-12 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">アンケートフォーム</h4>
+                    <p class="text-sm text-gray-400">LINE内で完結するフォーム。回答を自動タグ付け。</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition">
+                    <div class="w-12 h-12 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">流入経路分析</h4>
+                    <p class="text-sm text-gray-400">「どこから友だち登録されたか」を詳細に計測。</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition">
+                    <div class="w-12 h-12 bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">1:1チャット対応</h4>
+                    <p class="text-sm text-gray-400">複数スタッフでの顧客対応やステータス管理に対応。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金プラン -->
+    <section class="py-24 bg-white" id="pricing">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-4">分かりやすい料金プラン</h2>
+                <p class="text-gray-600 text-lg">ビジネスの規模に合わせて最適なプランをお選びください。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- プラン1 -->
+                <div class="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
+                    <h3 class="font-bold text-xl mb-2">ライト</h3>
+                    <p class="text-gray-500 text-sm mb-6">まずはLINE構築を始めたい方</p>
+                    <div class="text-3xl font-black mb-6">¥9,800 <span class="text-sm font-normal text-gray-500">/月</span></div>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-600">
+                        <li>友だち数: ~3,000人</li>
+                        <li>基本セグメント配信</li>
+                        <li>ステップ配信（3シナリオ）</li>
+                    </ul>
+                    <a href="#" class="block text-center border-2 border-primary text-primary font-bold py-3 rounded-full hover:bg-primary hover:text-white transition">申し込む</a>
+                </div>
+                <!-- プラン2（おすすめ） -->
+                <div class="bg-white border-2 border-primary p-8 rounded-2xl shadow-xl relative transform md:-translate-y-4">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white font-bold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider">人気No.1</div>
+                    <h3 class="font-bold text-xl mb-2 mt-2">スタンダード</h3>
+                    <p class="text-gray-500 text-sm mb-6">売上を本格的に伸ばしたい方</p>
+                    <div class="text-3xl font-black mb-6">¥29,800 <span class="text-sm font-normal text-gray-500">/月</span></div>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-600">
+                        <li class="font-bold">友だち数: ~10,000人</li>
+                        <li>高度なセグメント配信</li>
+                        <li>ステップ配信（無制限）</li>
+                        <li>外部システム・ECデータ連携</li>
+                    </ul>
+                    <a href="#" class="block text-center bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-full shadow-lg shadow-primary/20 transition">申し込む</a>
+                </div>
+                <!-- プラン3 -->
+                <div class="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
+                    <h3 class="font-bold text-xl mb-2">プロ</h3>
+                    <p class="text-gray-500 text-sm mb-6">大規模運用と完全最適化を目指す方</p>
+                    <div class="text-3xl font-black mb-6">¥59,800 <span class="text-sm font-normal text-gray-500">/月</span></div>
+                    <ul class="space-y-3 mb-8 text-sm text-gray-600">
+                        <li>友だち数: ~30,000人</li>
+                        <li>全機能アンロック</li>
+                        <li>専任担当者によるサポート</li>
+                    </ul>
+                    <a href="#" class="block text-center border-2 border-primary text-primary font-bold py-3 rounded-full hover:bg-primary hover:text-white transition">申し込む</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTAセクション -->
+    <section class="py-24 bg-gradient-to-br from-primary to-blue-900 text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">
+                LINE運用を、次のステージへ。
+            </h2>
+            <p class="text-xl text-blue-100 mb-10">
+                導入のご相談、お見積り、デモ体験など、まずはお気軽にお問い合わせください。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#ai-demo" class="bg-accent hover:bg-yellow-400 text-white text-center px-10 py-5 rounded-full font-bold text-xl shadow-2xl transition transform hover:-translate-y-1">
+                    AIシナリオ自動作成を試す
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-gray-50 pt-16 pb-8 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-6 h-6 bg-line-green rounded flex items-center justify-center text-white font-bold text-sm">L</div>
+                        <span class="font-bold text-xl text-primary">Lベスト</span>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-4">
+                        顧客との絆を深める、<br>次世代 of LINEマーケティングツール
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-4">製品</h4>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li><a href="#features" class="hover:text-primary transition">特徴・強み</a></li>
+                        <li><a href="#pricing" class="hover:text-primary transition">料金プラン</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-4">開発デモについて</h4>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li><a href="#ai-demo" class="hover:text-primary transition">AIシナリオ体験</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-4">会社情報</h4>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-primary transition">運営会社</a></li>
+                        <li><a href="#" class="hover:text-primary transition">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-400 text-sm border-t border-gray-200 pt-8">
+                &copy; 2026 L-Best Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gemini API / シナリオ制御 JS -->
+    <script>
+        // 【重要】公開時はGoogle AI Studio等で独自キーを取得し、HTTPリファラー制限を設定してここに記述可能
+        const apiKey = ""; 
+
+        // 現在のウィザード状態
+        let currentStep = 1;
+        let selectedIndustryId = 'restaurant';
+        let selectedIndustryLabel = '飲食店';
+        let selectedIndustryEmoji = '🍴';
+
+        let selectedKpiId = 'booking';
+        let selectedKpiLabel = '予約数UP';
+        let selectedKpiEmoji = '📅';
+
+        let selectedToneId = 'friendly';
+        let selectedToneLabel = '親しみやすい';
+
+        let stepCount = 3;
+        let isSurveyLinked = true;
+
+        // 生成されたシナリオの一時保存
+        let generatedScenarioData = [];
+        let currentlySelectedScenarioStep = 0;
+
+        // プレハッシュされた高精度モックデータ（API接続エラー時やキーなし状態の完全なフォールバック）
+        const fallbackScenarios = {
+            'restaurant_booking': [
+                { title: '1通目（友だち追加即時）', trigger: '友だち追加直後', message: 'ご登録ありがとうございます！🍴✨\nLベストカフェです。\n\n今ならお友だち限定で、次回使える【お会計10%OFFクーポン】をプレゼント！🎁\n\nさらに、LINEからいつでも簡単にWeb予約いただけます。今週末のお席のご用意も可能ですよ。お気軽にご予約くださいね。👇' },
+                { title: '2通目（追加2日後）', trigger: '追加2日後 12:00', message: 'こんにちは！お腹は空いていませんか？😋\n\n当店の不動のNo.1メニュー「特製とろけるハンバーグ」をご紹介！肉汁たっぷりの仕上がりは、一度食べたらやみつきになること間違いなしです。\n\nランチタイムのご予約はお席が埋まりやすくなっておりますので、こちらから事前にご予約いただくと確実です！📅' },
+                { title: '3通目（追加4日後）', trigger: '追加4日後 18:00', message: 'こんばんは！Lベストカフェです。☕\nお仕事お疲れ様でした。\n\n当店では季節限定の「大人の贅沢極上マロンパフェ」がスタートしました。🌰🍨\n自分へのご褒美に、ゆったりとしたカフェタイムを過ごしませんか？\n\n平日の夜は比較的お席に余裕がございます。こちらから簡単にご予約・空き状況の確認が可能です。お越しをお待ちしております！✨' }
+            ],
+            'salon_booking': [
+                { title: '1通目（追加直後）', trigger: '友だち追加直後', message: 'ご登録ありがとうございます！💇‍♀️✨\nSalon de Lベストです。\n\n理想のヘアスタイルを一緒に叶えましょう！\n今ならお友だち追加特典として【炭酸ヘッドスパ無料クーポン】を進呈中！\n\n空き状況の確認や、ネット予約は24時間こちらのLINEから承っています。ぜひチェックしてみてくださいね。' },
+                { title: '2通目（追加3日後）', trigger: '追加3日後 10:00', message: 'こんにちは！Salon de Lベストです。✨\n\n「自分に本当に似合うスタイルがわからない…」そんなお悩みはありませんか？\n当サロンでは、骨格と髪質から一番輝く黄金比デザインを提案するカウンセリングを大切にしています。😊\n\n気になる髪型があれば、ぜひ事前にLINEからメッセージでお送りくださいね。ご予約はこちらからどうぞ！' },
+                { title: '3通目（追加5日後）', trigger: '追加5日後 19:00', message: '一週間お疲れ様でした！リフレッシュの準備はできていますか？💆‍♀️\n\n当店オススメの「髪質改善トリートメント」は、パサつく髪に見違えるほどのツヤと潤いを取り戻します。\n土日の予約枠もまだ数席ございますので、こちらから即時予約でリラックスした休日を確保しましょう！' }
+            ],
+            'ec_cart': [
+                { title: '1通目（離脱30分後）', trigger: 'カート離脱30分後', message: 'お買い忘れはございませんか？🛒✨\nLベストECストアです。\n\nお客様のカートに商品が入ったままとなっております。大人気のアイテムですので、まもなく売り切れとなってしまう可能性がございます。🚨\n\n今なら送料無料でご購入いただけます！以下のボタンからカートに戻り、お買い物を完了してくださいね。' },
+                { title: '2通目（離脱24時間後）', trigger: '離脱24時間後', message: 'こんにちは！Lベストストアです。😊\n\n昨日カートに入れられた商品はチェックされましたか？\nお客様に安心してお買い物いただけるよう、サイズ交換や商品の不具合に対する【安心の30日間返品返金保証】をお付けしております。\n\nぜひ、安心してお試しください。こちらのリンクから直接購入画面へ進めます。' },
+                { title: '3通目（離脱3日後）', trigger: '離脱3日後', message: 'カートに入れられた商品は本日までの確保となります…！\n\nご検討中のお客様へ、本日限り使える【シークレット500円OFFクーポン】を特別にお送りします！お会計の際、下記コードをご入力ください。\n\n🎟️コード: L500\n今すぐおトクにお買い物を完了しましょう！👇' }
+            ],
+            // デフォルトのフォールバック
+            'default': [
+                { title: '1通目（トリガー）', trigger: '配信開始時', message: 'Lベストをご利用いただきありがとうございます！✨\n\nこちらはあなたのために設計されたAI特製メッセージです。ご登録特典やキャンペーン情報をここでお伝えし、確実なファーストアクションを促します。' },
+                { title: '2通目（フォロー）', trigger: '1日経過後', message: 'こんにちは！昨日お伝えした限定オファーはご覧いただけましたか？😊\n\nよくある質問や役立つコラム、さらに他のお客様の成功事例をここでお届けして信頼度をグッと高めます。' },
+                { title: '3通目（オファー）', trigger: '3日経過後', message: 'いよいよオファー終了間近となりました！🚨\n\nまだ間に合います。以下の限定リンクをクリックして、理想的なライフスタイルをスタートさせましょう！今すぐチェック。👇' }
+            ]
+        };
+
+        // 業種選択
+        function selectIndustry(id, label, emoji) {
+            selectedIndustryId = id;
+            selectedIndustryLabel = label;
+            selectedIndustryEmoji = emoji;
+
+            // 全カードのアクティブ解除
+            document.querySelectorAll('.industry-card').forEach(card => {
+                card.classList.remove('border-brand-purple', 'text-brand-purple');
+                card.classList.add('border-gray-200');
+            });
+
+            // 選択されたカードのアクティブ化
+            const selectedCard = document.querySelector(`.industry-card[data-id="${id}"]`);
+            if (selectedCard) {
+                selectedCard.classList.remove('border-gray-200');
+                selectedCard.classList.add('border-brand-purple', 'text-brand-purple');
+            }
+
+            // サマリーを即時更新
+            document.getElementById('summary-industry').textContent = label;
+        }
+
+        // KPI選択
+        function selectKpi(id, label, emoji) {
+            selectedKpiId = id;
+            selectedKpiLabel = label;
+            selectedKpiEmoji = emoji;
+
+            document.querySelectorAll('.kpi-card').forEach(card => {
+                card.classList.remove('border-brand-purple', 'text-brand-purple');
+                card.classList.add('border-gray-200');
+            });
+
+            const selectedCard = document.querySelector(`.kpi-card[data-id="${id}"]`);
+            if (selectedCard) {
+                selectedCard.classList.remove('border-gray-200');
+                selectedCard.classList.add('border-brand-purple', 'text-brand-purple');
+            }
+
+            document.getElementById('summary-kpi').textContent = label;
+        }
+
+        // トーン選択
+        function selectTone(tone) {
+            selectedToneId = tone;
+            if (tone === 'friendly') selectedToneLabel = '親しみやすい';
+            if (tone === 'professional') selectedToneLabel = 'プロフェッショナル';
+            if (tone === 'casual') selectedToneLabel = 'カジュアル';
+
+            document.querySelectorAll('.tone-btn').forEach(btn => {
+                btn.classList.remove('border-brand-purple', 'bg-brand-purple/5', 'text-brand-purple');
+                btn.classList.add('border-gray-200', 'text-gray-600');
+            });
+
+            const selectedBtn = document.getElementById(`tone-btn-${tone}`);
+            if (selectedBtn) {
+                selectedBtn.classList.remove('border-gray-200', 'text-gray-600');
+                selectedBtn.classList.add('border-brand-purple', 'bg-brand-purple/5', 'text-brand-purple');
+            }
+
+            document.getElementById('summary-tone').textContent = selectedToneLabel;
+        }
+
+        // ステップ数変更
+        function updateStepCount(val) {
+            stepCount = parseInt(val);
+            document.getElementById('step-count-val').textContent = val;
+            document.getElementById('summary-steps').textContent = val + 'ステップ';
+        }
+
+        // 次のステップへ
+        function goToNextStep() {
+            if (currentStep === 1) {
+                document.getElementById('wizard-step-1').classList.add('hidden');
+                document.getElementById('wizard-step-2').classList.remove('hidden');
+                
+                document.getElementById('step-indicator-2').classList.add('bg-brand-purple', 'text-white');
+                document.getElementById('step-indicator-2').classList.remove('bg-gray-200', 'text-gray-600');
+                document.getElementById('step-line-1').classList.add('bg-brand-purple');
+                document.getElementById('step-line-1').classList.remove('bg-gray-200');
+
+                document.getElementById('cancel-btn').classList.add('hidden');
+                document.getElementById('prev-btn').classList.remove('hidden');
+
+                currentStep = 2;
+            } else if (currentStep === 2) {
+                document.getElementById('wizard-step-2').classList.add('hidden');
+                document.getElementById('wizard-step-3').classList.remove('hidden');
+
+                document.getElementById('step-indicator-3').classList.add('bg-brand-purple', 'text-white');
+                document.getElementById('step-indicator-3').classList.remove('bg-gray-200', 'text-gray-600');
+                document.getElementById('step-line-2').classList.add('bg-brand-purple');
+                document.getElementById('step-line-2').classList.remove('bg-gray-200');
+
+                document.getElementById('next-btn').classList.add('hidden');
+                document.getElementById('generate-btn').classList.remove('hidden');
+
+                currentStep = 3;
+            }
+        }
+
+        // 前のステップへ
+        function goToPrevStep() {
+            if (currentStep === 3) {
+                document.getElementById('wizard-step-3').classList.add('hidden');
+                document.getElementById('wizard-step-2').classList.remove('hidden');
+
+                document.getElementById('step-indicator-3').classList.remove('bg-brand-purple', 'text-white');
+                document.getElementById('step-indicator-3').classList.add('bg-gray-200', 'text-gray-600');
+                document.getElementById('step-line-2').classList.remove('bg-brand-purple');
+                document.getElementById('step-line-2').classList.add('bg-gray-200');
+
+                document.getElementById('generate-btn').classList.add('hidden');
+                document.getElementById('next-btn').classList.remove('hidden');
+
+                currentStep = 2;
+            } else if (currentStep === 2) {
+                document.getElementById('wizard-step-2').classList.add('hidden');
+                document.getElementById('wizard-step-1').classList.remove('hidden');
+
+                document.getElementById('step-indicator-2').classList.remove('bg-brand-purple', 'text-white');
+                document.getElementById('step-indicator-2').classList.add('bg-gray-200', 'text-gray-600');
+                document.getElementById('step-line-1').classList.remove('bg-brand-purple');
+                document.getElementById('step-line-1').classList.add('bg-gray-200');
+
+                document.getElementById('prev-btn').classList.add('hidden');
+                document.getElementById('cancel-btn').classList.remove('hidden');
+
+                currentStep = 1;
+            }
+        }
+
+        //        // リセット処理
+        function resetWizard() {
+            currentStep = 1;
+            document.getElementById('wizard-result').classList.add('hidden');
+            document.getElementById('wizard-lead-form').classList.add('hidden');
+            document.getElementById('wizard-step-1').classList.remove('hidden');
+            document.getElementById('wizard-actions').classList.remove('hidden');
+
+            document.getElementById('step-indicator-2').classList.remove('bg-brand-purple', 'text-white');
+            document.getElementById('step-indicator-2').classList.add('bg-gray-200', 'text-gray-600');
+            document.getElementById('step-indicator-3').classList.remove('bg-brand-purple', 'text-white');
+            document.getElementById('step-indicator-3').classList.add('bg-gray-200', 'text-gray-600');
+            document.getElementById('step-line-1').classList.remove('bg-brand-purple');
+            document.getElementById('step-line-1').classList.add('bg-gray-200');
+            document.getElementById('step-line-2').classList.remove('bg-brand-purple');
+            document.getElementById('step-line-2').classList.add('bg-gray-200');
+
+            document.getElementById('prev-btn').classList.add('hidden');
+            document.getElementById('generate-btn').classList.add('hidden');
+            document.getElementById('cancel-btn').classList.remove('hidden');
+            document.getElementById('next-btn').classList.remove('hidden');
+
+            // フォームの入力値をクリア
+            document.getElementById('lead-capture-form').reset();
+        }
+
+        // シナリオ生成トリガー（リード獲得画面へ誘導）
+        async function triggerScenarioGeneration() {
+            document.getElementById('wizard-step-3').classList.add('hidden');
+            document.getElementById('wizard-actions').classList.add('hidden');
+            document.getElementById('wizard-lead-form').classList.remove('hidden');
+        }
+
+        // リードフォーム送信処理
+        async function submitLeadForm(event) {
+            event.preventDefault();
+
+            // 送信データを取得
+            const company = document.getElementById('lead-company').value;
+            const name = document.getElementById('lead-name').value;
+            const phone = document.getElementById('lead-phone').value;
+            const email = document.getElementById('lead-email').value;
+
+            // 送信ログ（実用時はここから外部MAツールやスプレッドシート、Webhookへ通知させることができます）
+            console.log("【リード獲得成功】", {
+                company,
+                name,
+                phone,
+                email,
+                selectedIndustry: selectedIndustryLabel,
+                selectedKpi: selectedKpiLabel,
+                tone: selectedToneLabel,
+                steps: stepCount,
+                surveyLinked: isSurveyLinked
+            });
+
+            // フォーム画面を隠し、ローディングを開始
+            document.getElementById('wizard-lead-form').classList.add('hidden');
+            document.getElementById('wizard-loading').classList.remove('hidden');
+
+            // APIキーの有無で処理を分岐
+            if (apiKey) {
+                await fetchAiScenario();
+            } else {
+                // APIキーがない場合のフォールバック（極上のシミュレーション体験）
+                setTimeout(() => {
+                    const searchKey = `${selectedIndustryId}_${selectedKpiId}`;
+                    let scenario = fallbackScenarios[searchKey] || fallbackScenarios['default'];
+                    
+                    // ステップ数に応じてデータを加工
+                    if (scenario.length > stepCount) {
+                        scenario = scenario.slice(0, stepCount);
+                    } else if (scenario.length < stepCount) {
+                        // ステップ数が足りない場合は拡張
+                        const originalLength = scenario.length;
+                        for (let i = originalLength; i < stepCount; i++) {
+                            scenario.push({
+                                title: `${i + 1}通目（追加フォロー）`,
+                                trigger: `追加${(i + 1) * 2}日後 12:00`,
+                                message: `【Lベストお役立ちフォロー】\nいつもLベストをご利用ありがとうございます！✨\n\nこちらはステップ${i + 1}の自動フォローメッセージです。ユーザーの「欲しいタイミング」にピンポイントで情報を届けることで、離脱を防ぎ、確実に成果へ繋ぎます。`
+                            });
+                        }
+                    }
+
+                    // アンケート連動オプションの分岐追加
+                    isSurveyLinked = document.getElementById('survey-checkbox').checked;
+                    if (isSurveyLinked && scenario.length >= 2) {
+                        scenario[0].message += '\n\n👇簡単な3秒アンケートにお答えいただくだけで、あなたにピッタリの情報を最適化してお送りします。まずは回答をスタート！';
+                        scenario[1].title = '2通目（アンケート回答あり）';
+                        scenario[1].trigger = '回答直後（即時分岐）';
+                    }
+
+                    generatedScenarioData = scenario;
+                    renderScenarioResult();
+                }, 2000); // 2秒の擬似ローディング
+            }
+        }
+
+        // APIを用いた実際のシナリオ生成
+        async function fetchAiScenario() {
+            isSurveyLinked = document.getElementById('survey-checkbox').checked;
+            
+            const prompt = `あなたは「Lベスト」に搭載された、超優秀なLINEステップ配信設計AIです。
+以下の条件で、ユーザーの心を動かし、目的（KPI）を達成する超高クオリティなLINEステップ配信シナリオを完全に日本語で設計してください。
+
+【条件】
+・業種: ${selectedIndustryLabel} (${selectedIndustryEmoji})
+・配信目的 (KPI): ${selectedKpiLabel}
+・文面トーン: ${selectedToneLabel}
+・作成するステップ数: ${stepCount}ステップ
+・アンケート連動を考慮するか: ${isSurveyLinked ? 'はい' : 'いいえ'}
+
+【出力形式ルール（厳格遵守）】
+必ず、以下のJSON配列形式のみを出力してください。マークダウンの囲みや、前後の余計な前置きテキスト（「作成しました」等）は一切含めず、純粋なJSON文字列だけを出力すること。
+
+JSONフォーマット例：
+[
+  {
+    "title": "1通目（追加直後）",
+    "trigger": "友だち追加直後",
+    "message": "配信メッセージ本文（絵文字を適度に入れた魅力的な文章）"
+  },
+  ...
+]
+`;
+
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                generationConfig: {
+                    responseMimeType: "application/json"
+                }
+            };
+
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) throw new Error('API通信に失敗しました。');
+                
+                const result = await response.json();
+                const jsonText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                
+                if (jsonText) {
+                    generatedScenarioData = JSON.parse(jsonText);
+                } else {
+                    throw new Error('テキストが取得できませんでした。');
+                }
+                renderScenarioResult();
+            } catch (err) {
+                console.error(err);
+                // エラー時はフォールバックを適用
+                const searchKey = `${selectedIndustryId}_${selectedKpiId}`;
+                generatedScenarioData = fallbackScenarios[searchKey] || fallbackScenarios['default'];
+                renderScenarioResult();
+            }
+        }
+
+        // シナリオ結果のビジュアル化（タイムライン形式）
+        function renderScenarioResult() {
+            document.getElementById('wizard-loading').classList.add('hidden');
+            document.getElementById('wizard-result').classList.remove('hidden');
+
+            const timelineContainer = document.getElementById('scenario-flow-timeline');
+            timelineContainer.innerHTML = '';
+
+            generatedScenarioData.forEach((step, idx) => {
+                const stepNum = idx + 1;
+                const isActive = idx === 0 ? 'border-brand-purple bg-brand-purple/5' : 'border-gray-200';
+                const textActive = idx === 0 ? 'text-brand-purple font-bold' : 'text-gray-500';
+
+                // 各ステップカードの生成
+                const stepCard = document.createElement('div');
+                stepCard.className = `timeline-step-item p-3 border rounded-xl cursor-pointer hover:shadow-sm transition-all duration-200 flex flex-col gap-1 ${isActive}`;
+                stepCard.dataset.index = idx;
+                stepCard.onclick = () => selectActiveScenarioStep(idx);
+
+                stepCard.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs ${textActive}">ステップ ${stepNum}</span>
+                        <span class="text-[10px] bg-gray-200 text-gray-600 px-1.5 py-0.5 rounded font-mono">${step.trigger}</span>
+                    </div>
+                    <div class="text-sm font-bold text-gray-800 line-clamp-1">${step.title}</div>
+                    <div class="text-[11px] text-gray-400 line-clamp-2">${step.message}</div>
+                `;
+
+                timelineContainer.appendChild(stepCard);
+
+                // 矢印（最後以外）
+                if (idx < generatedScenarioData.length - 1) {
+                    const arrow = document.createElement('div');
+                    arrow.className = 'flex justify-center my-1 text-gray-300';
+                    arrow.innerHTML = `
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-6l-7 7-7-7"></path>
+                        </svg>
+                    `;
+                    timelineContainer.appendChild(arrow);
+                }
+            });
+
+            // 初期選択表示
+            selectActiveScenarioStep(0);
+        }
+
+        // タイムラインでの特定ステップ選択
+        function selectActiveScenarioStep(index) {
+            currentlySelectedScenarioStep = index;
+            const data = generatedScenarioData[index];
+
+            // タイムラインカードのアクティブ色変更
+            const items = document.querySelectorAll('.timeline-step-item');
+            items.forEach((item, idx) => {
+                if (idx === index) {
+                    item.classList.remove('border-gray-200');
+                    item.classList.add('border-brand-purple', 'bg-brand-purple/5');
+                    item.querySelector('span').classList.add('text-brand-purple', 'font-bold');
+                } else {
+                    item.classList.remove('border-brand-purple', 'bg-brand-purple/5');
+                    item.classList.add('border-gray-200');
+                    item.querySelector('span').classList.remove('text-brand-purple', 'font-bold');
+                    item.querySelector('span').classList.add('text-gray-500');
+                }
+            });
+
+            // プレビュー表示の更新
+            document.getElementById('preview-step-badge').textContent = `${index + 1}通目（トリガー: ${data.trigger}）`;
+            document.getElementById('preview-message-text').textContent = data.message;
+        }
+
+        // メッセージのコピー機能
+        function copyScenarioMessage() {
+            const message = document.getElementById('preview-message-text').innerText;
+            const toast = document.getElementById('demo-copy-toast');
+
+            const temp = document.createElement('textarea');
+            temp.value = message;
+            document.body.appendChild(temp);
+            temp.select();
+
+            try {
+                document.execCommand('copy');
+                toast.classList.remove('hidden');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 2000);
+            } catch (err) {
+                console.error(err);
+            } finally {
+                document.body.removeChild(temp);
+            }
+        }
+    </script>
+</body>
+</html>
